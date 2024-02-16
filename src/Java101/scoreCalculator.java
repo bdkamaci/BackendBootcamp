@@ -16,9 +16,9 @@ public class scoreCalculator {
         }
 
         double total = 0;
-        for (int i = 0; i < scores.length; i++) {
-            total += scores[i];
-            }
+        for (int score : scores) {
+            total += score;
+        }
 
         double gpa = (total / subjects.length);
         System.out.println("GPA: " + gpa);
