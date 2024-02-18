@@ -2,7 +2,7 @@ package Java101;
 
 import java.util.Scanner;
 
-public class circleSectorAreaCalculator {
+public class CircleSectorAreaCalculator {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
