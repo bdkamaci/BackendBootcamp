@@ -12,7 +12,14 @@ public class scoreCalculator {
 
         for (int i = 0; i < 6; i++){
             System.out.print("Enter your " + subjects[i] + " score: ");
-            scores[i] = input.nextInt();
+            int scoreInput = input.nextInt();
+            if ((scoreInput > 0) && (scoreInput < 100)) {
+                scores[i] = scoreInput;
+            }
+        }
+
+        for (int scor : scores) {
+            System.out.println(scor);
         }
 
         double total = 0;
@@ -20,7 +27,13 @@ public class scoreCalculator {
             total += score;
         }
 
-        double gpa = (total / subjects.length);
+        int divident = 0;
+        for (int grade : scores){
+            if (grade != 0) {
+                divident ++;}
+        }
+
+        double gpa = (total / divident);
         System.out.println("GPA: " + gpa);
 
         final String passage = gpa >= 60
