@@ -13,9 +13,11 @@ public class LeapYearIdentifier {
         int year = input.nextInt();
 
         // Identification
-        int seperator = year % 4;
+        int divideByFour = year % 4;
+        int divideByHundred = year % 10;
+        int dividedByFourHundred = year % 400;
 
-        if (seperator == 0) {
+        if ((divideByFour == 0 && divideByHundred !=0) || dividedByFourHundred == 0) {
             System.out.println(year + " is a leap year.");
         } else {
             System.out.println(year + " is not a leap year.");
