@@ -18,9 +18,9 @@ public class RecursivePatternFormer {
     // Recursive Method to Form the Given Pattern
     public static void pattern(int number) {
         int temporary = number;
-        if (number >= 0 && number <= temporary) {
+        if (number <= temporary) {
             System.out.print(number + " ");
-            if (number == 0) {
+            if (number <= 0) {
                 return;
             }
             pattern(number - 5);
